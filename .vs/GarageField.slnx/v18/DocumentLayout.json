@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\services\\cleanupservices\\storagecleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\services\\cleanupservices\\storagecleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\services\\storageservices\\bucketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\services\\storageservices\\bucketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\controllers\\inspectionfilecontroller\\inspectionfilesadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\controllers\\inspectionfilecontroller\\inspectionfilesadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\services\\inspectionfileservices\\inspectionfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\services\\inspectionfileservices\\inspectionfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\dtos\\inspectionfiledtos\\inspectionfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\dtos\\inspectionfiledtos\\inspectionfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\dtos\\inspectionfiledtos\\allinspectionfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\dtos\\inspectionfiledtos\\allinspectionfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\dtos\\inspectiondtos\\updateinspectionstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\dtos\\inspectiondtos\\updateinspectionstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\controllers\\filecontroller\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\controllers\\filecontroller\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\services\\storageservices\\ifilestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\services\\storageservices\\ifilestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\services\\storageservices\\garagestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\services\\storageservices\\garagestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|c:\\users\\gulye\\desktop\\2026 internship\\garagefield\\garagefield\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62691C79-F33B-339C-4A2E-ED7BD923190C}|GarageField\\GarageField.csproj|solutionrelative:garagefield\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 188,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BucketService.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\StorageServices\\BucketService.cs",
+              "RelativeDocumentMoniker": "GarageField\\Services\\StorageServices\\BucketService.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\StorageServices\\BucketService.cs",
+              "RelativeToolTip": "GarageField\\Services\\StorageServices\\BucketService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:39:23.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StorageCleanupService.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\CleanupServices\\StorageCleanupService.cs",
+              "RelativeDocumentMoniker": "GarageField\\Services\\CleanupServices\\StorageCleanupService.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\CleanupServices\\StorageCleanupService.cs",
+              "RelativeToolTip": "GarageField\\Services\\CleanupServices\\StorageCleanupService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:41:45.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InspectionFilesAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Controllers\\InspectionFileController\\InspectionFilesAdminController.cs",
+              "RelativeDocumentMoniker": "GarageField\\Controllers\\InspectionFileController\\InspectionFilesAdminController.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Controllers\\InspectionFileController\\InspectionFilesAdminController.cs",
+              "RelativeToolTip": "GarageField\\Controllers\\InspectionFileController\\InspectionFilesAdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T07:46:59.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InspectionFileService.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\InspectionFileServices\\InspectionFileService.cs",
+              "RelativeDocumentMoniker": "GarageField\\Services\\InspectionFileServices\\InspectionFileService.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\InspectionFileServices\\InspectionFileService.cs",
+              "RelativeToolTip": "GarageField\\Services\\InspectionFileServices\\InspectionFileService.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAqwEQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:38:39.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InspectionFileDto.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\DTOs\\InspectionFileDTOs\\InspectionFileDto.cs",
+              "RelativeDocumentMoniker": "GarageField\\DTOs\\InspectionFileDTOs\\InspectionFileDto.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\DTOs\\InspectionFileDTOs\\InspectionFileDto.cs",
+              "RelativeToolTip": "GarageField\\DTOs\\InspectionFileDTOs\\InspectionFileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T07:44:54.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AllInspectionFileDto.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\DTOs\\InspectionFileDTOs\\AllInspectionFileDto.cs",
+              "RelativeDocumentMoniker": "GarageField\\DTOs\\InspectionFileDTOs\\AllInspectionFileDto.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\DTOs\\InspectionFileDTOs\\AllInspectionFileDto.cs",
+              "RelativeToolTip": "GarageField\\DTOs\\InspectionFileDTOs\\AllInspectionFileDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T07:44:47.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateInspectionStatusDto.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\DTOs\\InspectionDTOs\\UpdateInspectionStatusDto.cs",
+              "RelativeDocumentMoniker": "GarageField\\DTOs\\InspectionDTOs\\UpdateInspectionStatusDto.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\DTOs\\InspectionDTOs\\UpdateInspectionStatusDto.cs",
+              "RelativeToolTip": "GarageField\\DTOs\\InspectionDTOs\\UpdateInspectionStatusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T07:44:58.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Controllers\\FileController\\FilesController.cs",
+              "RelativeDocumentMoniker": "GarageField\\Controllers\\FileController\\FilesController.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Controllers\\FileController\\FilesController.cs",
+              "RelativeToolTip": "GarageField\\Controllers\\FileController\\FilesController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwDgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:43:50.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IFileStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\StorageServices\\IFileStorageService.cs",
+              "RelativeDocumentMoniker": "GarageField\\Services\\StorageServices\\IFileStorageService.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\StorageServices\\IFileStorageService.cs",
+              "RelativeToolTip": "GarageField\\Services\\StorageServices\\IFileStorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:38:15.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GarageStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\StorageServices\\GarageStorageService.cs",
+              "RelativeDocumentMoniker": "GarageField\\Services\\StorageServices\\GarageStorageService.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Services\\StorageServices\\GarageStorageService.cs",
+              "RelativeToolTip": "GarageField\\Services\\StorageServices\\GarageStorageService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAIwDkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:38:09.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Program.cs",
+              "RelativeDocumentMoniker": "GarageField\\Program.cs",
+              "ToolTip": "C:\\Users\\gulye\\Desktop\\2026 internship\\GarageField\\GarageField\\Program.cs",
+              "RelativeToolTip": "GarageField\\Program.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAUwGoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T01:48:47.472Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 232,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 329,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 190,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
