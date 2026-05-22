@@ -1,5 +1,10 @@
 ﻿using GarageField.Services.StorageServices;
+using Microsoft.Extensions.Configuration; // 🚀 IConfiguration için eksik olan using eklendi
+using System;
+using System.IO;
 using System.IO.Compression;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GarageField.Services.StorageServices
 {
@@ -18,27 +23,29 @@ namespace GarageField.Services.StorageServices
         {
             var keys = await _storage.ListFilesAsync(_bucket);
 
-            if (!keys.Any())
-                throw new Exception("Bucket boş");
-
             using var ms = new MemoryStream();
 
             using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, true))
             {
-                foreach (var key in keys)
+                if (keys != null && keys.Any())
                 {
-                    try
+                    foreach (var key in keys)
                     {
-                        using var stream = await _storage.DownloadFileAsync(_bucket, key);
+                        try
+                        {
+                            using var stream = await _storage.DownloadFileAsync(_bucket, key);
+                            if (stream == null) continue;
 
-                        var entry = zip.CreateEntry(key);
+                          
+                            var entry = zip.CreateEntry(key, CompressionLevel.Fastest);
 
-                        using var entryStream = entry.Open();
-                        await stream.CopyToAsync(entryStream);
-                    }
-                    catch
-                    {
-                        continue;
+                            using var entryStream = entry.Open();
+                            await stream.CopyToAsync(entryStream);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
                     }
                 }
             }

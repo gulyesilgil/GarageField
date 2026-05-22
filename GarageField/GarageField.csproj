@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Garage-Service\Data\**" />
+    <Content Remove="Garage-Service\Data\**" />
+    <EmbeddedResource Remove="Garage-Service\Data\**" />
+    <None Remove="Garage-Service\Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="4.0.22.1" />
+    <PackageReference Include="EF.Core.Repository" Version="1.0.0.2" />
+    <PackageReference Include="EFCore.BulkExtensions" Version="10.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.7">
@@ -21,11 +30,6 @@
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Garage-Service\Data\garage_data\" />
-    <Folder Include="Garage-Service\Data\garage_meta\" />
   </ItemGroup>
 
 </Project>

@@ -1,24 +1,8 @@
 [
   {
-    "ContainingType": "GarageField.Controllers.File.FilesController",
-    "Method": "Cleanup",
-    "RelativePath": "api/files/cleanup",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dryRun",
-        "Type": "System.Boolean",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "GarageField.Controllers.File.FilesController",
-    "Method": "DebugBucket",
-    "RelativePath": "api/files/debug-bucket",
+    "ContainingType": "GarageField.Controllers.InspectionFilesController",
+    "Method": "GetAllFiles",
+    "RelativePath": "api/files/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -46,17 +30,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
-    "Method": "GetAll",
-    "RelativePath": "api/inspections",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
+    "ContainingType": "GarageField.Controllers.InspectionsController",
     "Method": "Create",
     "RelativePath": "api/inspections",
     "HttpMethod": "POST",
@@ -72,7 +46,17 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
+    "ContainingType": "GarageField.Controllers.InspectionsController",
+    "Method": "GetAll",
+    "RelativePath": "api/inspections",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageField.Controllers.InspectionsController",
     "Method": "GetById",
     "RelativePath": "api/inspections/{id}",
     "HttpMethod": "GET",
@@ -88,7 +72,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
+    "ContainingType": "GarageField.Controllers.InspectionsController",
     "Method": "Update",
     "RelativePath": "api/inspections/{id}",
     "HttpMethod": "PUT",
@@ -109,7 +93,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
+    "ContainingType": "GarageField.Controllers.InspectionsController",
     "Method": "Delete",
     "RelativePath": "api/inspections/{id}",
     "HttpMethod": "DELETE",
@@ -125,7 +109,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
+    "ContainingType": "GarageField.Controllers.InspectionsController",
     "Method": "UpdateStatus",
     "RelativePath": "api/inspections/{id}/status",
     "HttpMethod": "PATCH",
@@ -146,7 +130,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.InspectionFile.InspectionFilesController",
+    "ContainingType": "GarageField.Controllers.InspectionFilesController",
     "Method": "Upload",
     "RelativePath": "api/inspections/{inspectionId}/files",
     "HttpMethod": "POST",
@@ -167,7 +151,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.InspectionFile.InspectionFilesController",
+    "ContainingType": "GarageField.Controllers.InspectionFilesController",
     "Method": "GetFiles",
     "RelativePath": "api/inspections/{inspectionId}/files",
     "HttpMethod": "GET",
@@ -183,7 +167,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.InspectionFile.InspectionFilesController",
+    "ContainingType": "GarageField.Controllers.InspectionFilesController",
     "Method": "Delete",
     "RelativePath": "api/inspections/{inspectionId}/files/{fileId}",
     "HttpMethod": "DELETE",
@@ -204,7 +188,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.InspectionFile.InspectionFilesController",
+    "ContainingType": "GarageField.Controllers.InspectionFilesController",
     "Method": "Download",
     "RelativePath": "api/inspections/{inspectionId}/files/{fileId}/download",
     "HttpMethod": "GET",
@@ -225,7 +209,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.InspectionFile.InspectionFilesController",
+    "ContainingType": "GarageField.Controllers.InspectionFilesController",
     "Method": "DownloadAll",
     "RelativePath": "api/inspections/{inspectionId}/files/download-all",
     "HttpMethod": "GET",
@@ -241,8 +225,24 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GarageField.Controllers.Inspection.InspectionsController",
-    "Method": "GetStatuses",
+    "ContainingType": "GarageField.Controllers.InspectionsController",
+    "Method": "CreateBulk",
+    "RelativePath": "api/inspections/bulk",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bulkDto",
+        "Type": "GarageField.DTOs.Inspection.BulkCreateInspectionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageField.Controllers.InspectionsController",
+    "Method": "GetAllStatuses",
     "RelativePath": "api/inspections/statuses",
     "HttpMethod": "GET",
     "IsController": true,

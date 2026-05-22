@@ -1,149 +1,170 @@
-﻿using GarageField.Data;
-using GarageField.DTOs.Inspection;
+﻿using GarageField.DTOs.Inspection;
 using GarageField.Entities;
 using GarageField.Enums;
-using Microsoft.EntityFrameworkCore;
+using GarageField.Repositories.Interfaces;
+using GarageField.Services.StorageServices;
+using GarageField.Data; // 🚀 AppDbContext için eklendi
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace GarageField.Services.InspectionServices
+namespace GarageField.Services.InspectionServices;
+
+public class InspectionService
 {
-    public class InspectionService
+    private readonly IInspectionRepository _inspectionRepository;
+    private readonly IInspectionFileRepository _fileRepository;
+    private readonly IFileStorageService _storageService;
+    private readonly AppDbContext _context; // 
+    private readonly string _bucketName;
+
+    public InspectionService(
+        IInspectionRepository inspectionRepository,
+        IInspectionFileRepository fileRepository,
+        IFileStorageService storageService,
+        AppDbContext context, // 
+        IConfiguration config)
     {
-        private readonly AppDbContext _context;
+        _inspectionRepository = inspectionRepository;
+        _fileRepository = fileRepository;
+        _storageService = storageService;
+        _context = context;
+        _bucketName = config["GarageSettings:BucketName"]!;
+    }
 
-        public InspectionService(AppDbContext context)
+    public async Task<InspectionDto> CreateInspectionAsync(CreateInspectionDto dto)
+    {
+        var entity = new Inspection
         {
-            _context = context;
-        }
+            Id = Guid.NewGuid(), // 
+            ProductName = dto.ProductName,
+            Description = dto.Description,
+            InspectorName = dto.InspectorName,
+            Status = InspectionStatus.Pending,
+            UpdatedAt = DateTime.UtcNow
+        };
 
-        // 🔥 CREATE
-        public async Task<InspectionDto> CreateAsync(CreateInspectionDto dto)
+        await _inspectionRepository.InsertManyAsync(new List<Inspection> { entity });
+        return ToDto(entity);
+    }
+
+    public async Task<List<InspectionDto>> CreateBulkInspectionsAsync(BulkCreateInspectionDto bulkDto)
+    {
+        var entityList = new List<Inspection>();
+
+        foreach (var dto in bulkDto.Inspections)
         {
-            var entity = ToEntity(dto);
-
-            _context.Inspections.Add(entity);
-            await _context.SaveChangesAsync();
-
-            return ToDto(entity);
-        }
-
-        // 🔥 GET ALL
-        public async Task<List<InspectionDto>> GetAllAsync()
-        {
-            var entities = await _context.Inspections.ToListAsync();
-
-            return entities.Select(ToDto).ToList();
-        }
-
-        // 🔥 GET BY ID
-        public async Task<InspectionDto?> GetByIdAsync(Guid id)
-        {
-            var entity = await _context.Inspections.FindAsync(id);
-
-            if (entity == null)
-                return null;
-
-            return ToDto(entity);
-        }
-
-        // 🔥 UPDATE (FULL)
-        public async Task<bool> UpdateAsync(Guid id, CreateInspectionDto dto)
-        {
-            var entity = await _context.Inspections.FindAsync(id);
-
-            if (entity == null)
-                return false;
-
-            UpdateEntity(entity, dto);
-
-            await _context.SaveChangesAsync();
-
-            return true;
-        }
-
-        // 🔥 PATCH STATUS
-        public async Task<bool> UpdateStatusAsync(Guid id, string status)
-        {
-            var entity = await _context.Inspections.FindAsync(id);
-
-            if (entity == null)
-                return false;
-
-            entity.Status = ParseStatus(status);
-            entity.UpdatedAt = DateTime.UtcNow;
-
-            await _context.SaveChangesAsync();
-
-            return true;
-        }
-
-        // 🔥 DELETE
-        public async Task<bool> DeleteAsync(Guid id)
-        {
-            var entity = await _context.Inspections.FindAsync(id);
-
-            if (entity == null)
-                return false;
-
-            _context.Inspections.Remove(entity);
-            await _context.SaveChangesAsync();
-
-            return true;
-        }
-
-        // 🔥 STATUSES
-        public List<string> GetAllStatuses()
-        {
-            return Enum.GetNames(typeof(InspectionStatus)).ToList();
-        }
-
-        // ======================
-        // 🔥 MAPPING METHODS
-        // ======================
-
-        private Inspection ToEntity(CreateInspectionDto dto)
-        {
-            return new Inspection
+            var entity = new Inspection
             {
-                Id = Guid.NewGuid(),
+                Id = Guid.NewGuid(), // 
                 ProductName = dto.ProductName,
                 Description = dto.Description,
                 InspectorName = dto.InspectorName,
-                Status = ParseStatus(dto.Status),
-                CreatedAt = DateTime.UtcNow,
+                Status = InspectionStatus.Pending,
                 UpdatedAt = DateTime.UtcNow
             };
+            entityList.Add(entity);
         }
 
-        private void UpdateEntity(Inspection entity, CreateInspectionDto dto)
-        {
-            entity.ProductName = dto.ProductName;
-            entity.Description = dto.Description;
-            entity.InspectorName = dto.InspectorName;
-            entity.Status = ParseStatus(dto.Status);
-            entity.UpdatedAt = DateTime.UtcNow;
-        }
+        await _inspectionRepository.InsertManyAsync(entityList);
+        return entityList.Select(ToDto).ToList();
+    }
 
-        private InspectionDto ToDto(Inspection entity)
+    public async Task<List<InspectionDto>> GetAllInspectionsAsync()
+    {
+        var inspections = await _inspectionRepository.GetAllAsync();
+        return inspections.Select(ToDto).ToList();
+    }
+
+    public async Task<InspectionDto?> GetInspectionByIdAsync(Guid id)
+    {
+        var inspection = await _inspectionRepository.GetByIdAsync(id);
+        return inspection == null ? null : ToDto(inspection);
+    }
+
+    public async Task<bool> UpdateAsync(Guid id, CreateInspectionDto dto)
+    {
+        var inspection = await _inspectionRepository.GetByIdAsync(id);
+        if (inspection == null) return false;
+
+        inspection.ProductName = dto.ProductName;
+        inspection.Description = dto.Description;
+        inspection.InspectorName = dto.InspectorName;
+        inspection.UpdatedAt = DateTime.UtcNow;
+
+        await _inspectionRepository.InsertManyAsync(new List<Inspection> { inspection });
+        return true;
+    }
+
+    public async Task<bool> UpdateStatusAsync(Guid id, string status)
+    {
+        var inspection = await _inspectionRepository.GetByIdAsync(id);
+        if (inspection == null) return false;
+
+        if (Enum.TryParse<InspectionStatus>(status, true, out var parsed))
         {
-            return new InspectionDto
+            inspection.Status = parsed;
+            inspection.UpdatedAt = DateTime.UtcNow;
+            await _inspectionRepository.InsertManyAsync(new List<Inspection> { inspection });
+            return true;
+        }
+        return false;
+    }
+
+    public async Task<bool> DeleteAsync(Guid id)
+    {
+        var inspection = await _inspectionRepository.GetByIdAsync(id);
+        if (inspection == null) return false;
+
+        var files = await _fileRepository.GetByInspectionIdAsync(id);
+        var fileList = files?.ToList() ?? new List<InspectionFile>();
+
+        if (fileList.Any())
+        {
+            foreach (var file in fileList)
             {
-                Id = entity.Id,
-                ProductName = entity.ProductName,
-                Description = entity.Description,
-                InspectorName = entity.InspectorName,
-                Status = entity.Status.ToString(),
-                CreatedAt = entity.CreatedAt,
-                UpdatedAt = entity.UpdatedAt
-            };
+                try
+                {
+                    await _storageService.DeleteFileAsync(_bucketName, file.StoredFileName);
+                }
+                catch
+                {
+                    continue;
+                }
+            }
+
+            foreach (var file in fileList)
+            {
+                file.IsDeleted = true;
+                file.DeletedAt = DateTime.UtcNow;
+                _context.InspectionFiles.Update(file);
+            }
         }
 
-        // 🔥 SAFE ENUM PARSE
-        private InspectionStatus ParseStatus(string status)
+        _inspectionRepository.Delete(inspection);
+        await _context.SaveChangesAsync(); // 
+
+        return true;
+    }
+
+    public List<string> GetAllStatuses()
+    {
+        return Enum.GetNames(typeof(InspectionStatus)).ToList();
+    }
+
+    private static InspectionDto ToDto(Inspection inspection)
+    {
+        return new InspectionDto
         {
-            if (!Enum.TryParse<InspectionStatus>(status, true, out var parsed))
-                throw new ArgumentException($"Invalid status: {status}");
-
-            return parsed;
-        }
+            Id = inspection.Id,
+            ProductName = inspection.ProductName,
+            Description = inspection.Description,
+            InspectorName = inspection.InspectorName,
+            Status = inspection.Status.ToString(),
+            CreatedAt = inspection.CreatedAt,
+            UpdatedAt = inspection.UpdatedAt ?? inspection.CreatedAt
+        };
     }
 }

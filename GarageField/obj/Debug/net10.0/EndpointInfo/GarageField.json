@@ -5,41 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/files/cleanup": {
-      "get": {
-        "tags": [
-          "Files"
-        ],
-        "parameters": [
-          {
-            "name": "dryRun",
-            "in": "query",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/files/download-bucket": {
-      "get": {
-        "tags": [
-          "Files"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/files/debug-bucket": {
       "get": {
         "tags": [
           "Files"
@@ -110,6 +76,18 @@
               "format": "uuid"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/files/all": {
+      "get": {
+        "tags": [
+          "InspectionFiles"
         ],
         "responses": {
           "200": {
@@ -218,16 +196,6 @@
       }
     },
     "/api/inspections": {
-      "get": {
-        "tags": [
-          "Inspections"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "post": {
         "tags": [
           "Inspections"
@@ -247,6 +215,47 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateInspectionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Inspections"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/inspections/bulk": {
+      "post": {
+        "tags": [
+          "Inspections"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkCreateInspectionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkCreateInspectionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkCreateInspectionDto"
               }
             }
           }
@@ -438,6 +447,19 @@
   },
   "components": {
     "schemas": {
+      "BulkCreateInspectionDto": {
+        "type": "object",
+        "properties": {
+          "inspections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateInspectionDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateInspectionDto": {
         "type": "object",
         "properties": {
@@ -450,10 +472,6 @@
             "nullable": true
           },
           "inspectorName": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
             "type": "string",
             "nullable": true
           }

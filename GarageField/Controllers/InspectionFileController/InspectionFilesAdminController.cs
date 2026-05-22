@@ -14,7 +14,7 @@ namespace GarageField.Controllers.InspectionFileController
             _service = service;
         }
 
-        // 🔥 GET ALL FILES
+        // GET ALL FILES
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

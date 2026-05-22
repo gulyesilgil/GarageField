@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GarageField")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3990b2e3fdd6273e5ac1b28c9c18564fe32226f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c08e4965be32de698d1321c8d010bbfad2060f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GarageField")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GarageField")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
